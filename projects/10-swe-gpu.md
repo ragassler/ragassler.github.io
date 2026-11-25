@@ -48,7 +48,7 @@ from **one code base on a CPU, a single GPU or many GPUs**:
 - `ParallelStencil.jl` kernels for CPU/GPU portability and `ImplicitGlobalGrid.jl`
   for MPI domain decomposition with halo exchange,
 - memory-throughput analysis and weak scaling up to 64 GPUs: almost perfect up
-  to 8 GPUs, 1.25× runtime at 64.
+  to 8 GPUs and 1.25× runtime at 64, with an unexplained outlier at 32.
 
 ## Solo extension: the Cleuson dam break
 
