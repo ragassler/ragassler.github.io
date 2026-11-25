@@ -234,7 +234,7 @@ TEMPLATE = """<!doctype html>
 <meta name="description" content="{description}">
 <meta property="og:title" content="{name} · Portfolio">
 <meta property="og:description" content="{description}">
-<meta property="og:image" content="assets/media/cleuson_zoom_3d.jpg">
+<meta property="og:image" content="assets/media/cleuson_2d_5m.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">

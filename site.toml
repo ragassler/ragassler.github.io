@@ -53,15 +53,15 @@ what = "Apprenticeship as druggist (EFZ), then Passerelle to university"
 
 # Large animation next to the intro
 [hero]
-src = "assets/media/cleuson_zoom_3d.mp4"
+src = "assets/media/cleuson_2d_5m.mp4"
 caption = "Dam-break simulation of Lac de Cleuson (VS) on swisstopo terrain, 5 m grid, using my wet/dry finite-volume solver."
-alt = "3D animation of water leaving the Cleuson reservoir after the dam is removed"
+alt = "Top-down map animation of the flood wave leaving the Cleuson reservoir and running down the valley"
 project = "swe-gpu"
 
 # Small animations/plots below the intro; each links to a project
 [[highlights]]
-src = "assets/media/cleuson_valley_3d.mp4"
-caption = "Flood wave down the Printze valley"
+src = "assets/media/cleuson_zoom_3d.mp4"
+caption = "3D close-up of the breach and reservoir"
 project = "swe-gpu"
 
 [[highlights]]
@@ -75,6 +75,6 @@ caption = "Social Force pedestrian model, AVX2-optimised"
 project = "asl-social-force"
 
 [[highlights]]
-src = "assets/img/hpc4wc_strong_scaling.png"
-caption = "Strong scaling of MPI domain decompositions"
+src = "assets/img/hpc4wc_time_per_iteration.png"
+caption = "Kernel vs. communication time for five 16-GPU decompositions"
 project = "hpc4wc"

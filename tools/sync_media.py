@@ -24,6 +24,7 @@ OUT = SITE / "assets"
 SWE = "ETH/Master/sem_2/gpu2/ShallowWater4PDEonGPU/docs"
 HPC4WC = "ETH/Master/sem_2/HPC4WC/HPC4WC_project3_domain_decomp/output"
 ASL = "ETH/Master/sem_2/AdvSysLab/Project"
+SPGEMM = "ETH/Bachelor/5_sem/DPHPC/Symbolic_SPgeMM/report_source"
 
 # (source relative to ~/Documents, destination relative to assets/, options)
 # options: poster=<seconds> time of the poster frame, crop=<ffmpeg crop expr>
@@ -33,6 +34,8 @@ MEDIA = [
      {"poster": 9, "crop": "1200:960:230:0"}),
     (f"{SWE}/animations/cleuson_dam_break_5m_3d.mp4", "media/cleuson_valley_3d.mp4",
      {"poster": 12, "crop": "1264:960:156:0"}),
+    (f"{SWE}/animations/cleuson_dam_break_5m_2d.mp4", "media/cleuson_2d_5m.mp4",
+     {"poster": 9, "crop": "760:1170:260:15"}),
     (f"{SWE}/animations/cleuson_longitudinal_section.mp4", "media/cleuson_section.mp4",
      {"poster": 6}),
     (f"{SWE}/animations/QualityVisualizations/NewTopo1_Gauss.mp4", "media/swe_gauss_3d.mp4",
@@ -41,8 +44,14 @@ MEDIA = [
     (f"{SWE}/final_presentation_docs/performance_plot.png", "img/swe_bandwidth.png", {}),
     ("ETH/Master/sem_2/gpu2/PDEonGPU_Phase_2.pdf", "pdf/swe_multi_gpu_slides.pdf", {}),
     # HPC4WC
-    (f"{HPC4WC}/strong_scaling_throughput.png", "img/hpc4wc_strong_scaling.png", {}),
     (f"{HPC4WC}/domain_decompositions.png", "img/hpc4wc_decompositions.png", {}),
+    ("ETH/Master/sem_2/HPC4WC/plot_stack_time_16ranks.png", "img/hpc4wc_time_per_iteration.png", {}),
+    ("ETH/Master/sem_2/HPC4WC/HPC4WC_project.pdf", "pdf/hpc4wc_domain_decomposition_report.pdf", {}),
+    # DPHPC symbolic SpGEMM (figures from the report sources)
+    (f"{SPGEMM}/performance_plot_with_hash_table.png", "img/spgemm_overlap_methods.png", {}),
+    (f"{SPGEMM}/diagrams/BloomFilter_And_Required_Cols.png", "img/spgemm_bloom_filter.png", {}),
+    # Compile report.tex (e.g. on Overleaf), save it as report_compiled.pdf next to it, re-run:
+    (f"{SPGEMM}/report_compiled.pdf", "pdf/dphpc_symbolic_spgemm_report.pdf", {}),
     # Advanced Systems Lab
     (f"{ASL}/docs/out.gif", "media/asl_pedestrians.mp4", {"poster": 6}),
     (f"{ASL}/docs/roofline_avx_1000_1000.svg", "img/asl_roofline.svg", {}),

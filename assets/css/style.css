@@ -92,8 +92,8 @@ figure { margin: 0; }
 }
 .frame img, .frame video { display: block; width: 100%; height: auto; }
 figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 8px; line-height: 1.45; }
-.hero-media .frame { aspect-ratio: 5 / 4; }
-.hero-media video { height: 100%; object-fit: cover; }
+.hero-media .frame { display: flex; justify-content: center; }
+.hero-media video { width: auto; max-width: 100%; max-height: min(76vh, 680px); }
 .jump { font-weight: 500; margin-right: 4px; }
 video { cursor: pointer; }
 
@@ -214,6 +214,8 @@ video { cursor: pointer; }
   margin-bottom: 24px;
 }
 .media-grid.one { grid-template-columns: minmax(0, 640px); }
+.media-grid { align-items: start; }
+.media-grid .frame img, .media-grid .frame video { max-height: 480px; object-fit: contain; }
 .prose { max-width: 72ch; }
 .prose h3 { font-size: 1.15rem; margin: 26px 0 8px; }
 .prose p { margin: 0 0 12px; }
