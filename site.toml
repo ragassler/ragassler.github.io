@@ -1,0 +1,80 @@
+# Site-wide content. Text fields accept simple Markdown (**bold**, *italic*, [link](url)).
+
+name = "Ramura Gassler"
+role = "MSc Computational Science & Engineering · ETH Zurich"
+headline = "Numerical PDE solvers that run fast on GPUs and clusters, with results you can check."
+description = "Portfolio of Ramura Gassler: high-performance scientific computing, finite-volume and finite-element methods, multi-GPU simulation."
+
+intro = """
+I am a Master's student in Computational Science and Engineering at ETH Zurich,
+specialising in geophysics and atmospheric physics. Most of my work combines
+numerical methods with hardware: finite-volume and finite-element solvers for
+PDEs, parallelised with MPI and GPUs, then profiled, scaled and verified.
+
+This page collects theses, research work and course projects. Click a title
+to read its abstract or summary. Code and reports are linked where they are public.
+"""
+
+email = "ramura.gassler@hotmail.com"
+github = "https://github.com/ragassler"
+linkedin = ""          # e.g. "https://www.linkedin.com/in/..."
+cv = ""                # e.g. "assets/pdf/cv_ramura_gassler.pdf" (use a version without phone number)
+
+footer = "© 2026 Ramura Gassler · Terrain data in the Cleuson animations © swisstopo"
+
+skills = [
+  "Julia", "C / C++", "Python", "MPI", "CUDA / GPU", "OpenMP", "SIMD (AVX2)",
+  "ParallelStencil.jl", "ImplicitGlobalGrid.jl", "FEniCSx", "COMSOL",
+  "Slurm", "NVIDIA Nsight", "Linux", "Git",
+]
+
+[[background]]
+when = "2026 –"
+what = "Research assistant, computational mechanics, ETH Zurich"
+detail = "FEM data generation for solid mechanics (FEniCSx)"
+
+[[background]]
+when = "2026 –"
+what = "Teaching assistant, *Introduction to Computing*, ETH Zurich"
+
+[[background]]
+when = "2025 –"
+what = "MSc Computational Science & Engineering, ETH Zurich"
+detail = "Specialisations: Geophysics, Physics of the Atmosphere"
+
+[[background]]
+when = "2021 – 2025"
+what = "BSc Computational Science & Engineering, ETH Zurich"
+detail = "Thesis on well-balanced finite-volume schemes (Seminar for Applied Mathematics)"
+
+[[background]]
+when = "2014 – 2021"
+what = "Apprenticeship as druggist (EFZ), then Passerelle to university"
+
+# Large animation next to the intro
+[hero]
+src = "assets/media/cleuson_zoom_3d.mp4"
+caption = "Dam-break simulation of Lac de Cleuson (VS) on swisstopo terrain, 5 m grid, using my wet/dry finite-volume solver."
+alt = "3D animation of water leaving the Cleuson reservoir after the dam is removed"
+project = "swe-gpu"
+
+# Small animations/plots below the intro; each links to a project
+[[highlights]]
+src = "assets/media/cleuson_valley_3d.mp4"
+caption = "Flood wave down the Printze valley"
+project = "swe-gpu"
+
+[[highlights]]
+src = "assets/media/swe_gauss_3d.mp4"
+caption = "Multi-GPU shallow-water run over topography"
+project = "swe-gpu"
+
+[[highlights]]
+src = "assets/media/asl_pedestrians.mp4"
+caption = "Social Force pedestrian model, AVX2-optimised"
+project = "asl-social-force"
+
+[[highlights]]
+src = "assets/img/hpc4wc_strong_scaling.png"
+caption = "Strong scaling of MPI domain decompositions"
+project = "hpc4wc"
