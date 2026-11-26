@@ -8,6 +8,10 @@ type = "MSc semester thesis"
 year = "2026"
 tags = ["FEM", "COMSOL", "Viscoelastic flow", "Non-Newtonian fluids"]
 note = "The thesis itself is not public. This is a general summary of the work."
+
+[[media]]
+src = "assets/img/semester_3d_wi_final.png"
+caption = "Weissenberg number (Wi) at the final time in a 3D extrusion geometry. Wi is monitored to check the stability of the viscoelastic solve and shows where mesh refinement helps."
 +++
 Many industrial materials, such as polymer melts, pastes and other complex fluids,
 are **viscoelastic**: they flow like a liquid but also store and release elastic

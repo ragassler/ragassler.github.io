@@ -47,6 +47,8 @@ MEDIA = [
     (f"{HPC4WC}/domain_decompositions.png", "img/hpc4wc_decompositions.png", {}),
     ("ETH/Master/sem_2/HPC4WC/plot_stack_time_16ranks.png", "img/hpc4wc_time_per_iteration.png", {}),
     ("ETH/Master/sem_2/HPC4WC/HPC4WC_project.pdf", "pdf/hpc4wc_domain_decomposition_report.pdf", {}),
+    # Semester thesis (only general figures, no model details)
+    ("ETH/Master/sem_1/Semester_arbeit/presi/3d_simple_wi.png", "img/semester_3d_wi_final.png", {}),
     # DPHPC symbolic SpGEMM (figures from the report sources)
     (f"{SPGEMM}/performance_plot_with_hash_table.png", "img/spgemm_overlap_methods.png", {}),
     (f"{SPGEMM}/diagrams/BloomFilter_And_Required_Cols.png", "img/spgemm_bloom_filter.png", {}),
