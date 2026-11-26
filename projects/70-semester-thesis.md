@@ -1,24 +1,27 @@
 +++
-# DRAFT: not published until you set draft = false.
-# Check first whether the ZRM model may be named/shown publicly.
-draft = true
+# Kept general on purpose: no model equations or method details of ZRM.
 id = "semester-thesis"
 order = 45
-title = "FEM simulation of a viscoelastic (ZRM) model in different channel geometries"
-summary = "Semester thesis: implementing and validating a viscoelastic constitutive model in COMSOL, from benchmark flows to 3D extrusion."
+title = "FEM simulation of the ZRM viscoelastic model for different channel geometries"
+summary = "Semester thesis: implementing a viscoelastic constitutive model in a finite-element framework and testing it from benchmark flows to 3D extrusion geometries."
 type = "MSc semester thesis"
 year = "2026"
 tags = ["FEM", "COMSOL", "Viscoelastic flow", "Non-Newtonian fluids"]
+note = "The thesis itself is not public. This is a general summary of the work."
 +++
-**Goal.** Investigate finite-element simulations of a viscoelastic
-constitutive model (ZRM) in channel geometries ranging from benchmark flows to
-extrusion-like configurations.
+Many industrial materials, such as polymer melts, pastes and other complex fluids,
+are **viscoelastic**: they flow like a liquid but also store and release elastic
+stress. Simulating them requires constitutive models that go beyond Newtonian
+fluids, and these models are numerically demanding.
 
-**Approach.** Implement and modify the viscoelastic flow set-up in COMSOL,
-validate it on canonical cases (2D Couette and Poiseuille flow), then extend
-to 2D and 3D extrusion geometries and analyse stress, velocity fields and
-dissipation.
+In this semester thesis I simulated a viscoelastic constitutive model with the
+**finite element method** in channel geometries of increasing complexity.
 
-**Outcome.** Physical consistency is assessed with conservation checks (mass
-balance, energy and dissipation) and numerical robustness, and flow and stress
-patterns are compared across geometries.
+- **Implementation:** set up and extended a viscoelastic flow model in COMSOL,
+  including custom modifications of the constitutive equations.
+- **Validation** on canonical benchmark flows (2D Couette and Poiseuille flow)
+  before moving to complex geometries.
+- **Application** to 2D and 3D extrusion-like channel geometries, analysing
+  velocity fields, stress distributions and dissipation.
+- **Physical consistency checks:** mass balance, energy and dissipation budgets,
+  and the numerical robustness of the simulations across geometries.
