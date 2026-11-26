@@ -60,9 +60,9 @@ project = "swe-gpu"
 
 # Small animations/plots below the intro; each links to a project
 [[highlights]]
-src = "assets/media/cleuson_zoom_3d.mp4"
-caption = "3D close-up of the breach and reservoir"
-project = "swe-gpu"
+src = "assets/img/semester_3d_wi_final.png"
+caption = "Viscoelastic flow in a 3D extrusion geometry (FEM)"
+project = "semester-thesis"
 
 [[highlights]]
 src = "assets/media/swe_gauss_3d.mp4"
