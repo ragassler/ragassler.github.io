@@ -24,7 +24,11 @@ src = "assets/media/swe_gauss_3d.mp4"
 caption = "Wave propagation over topography, rendered from multi-GPU output."
 
 [[links]]
-label = "Code on GitHub"
+label = "Dam-break repo (my continuation)"
+url = "https://github.com/ragassler/ShallowWater-DamBreak"
+
+[[links]]
+label = "Team repo"
 url = "https://github.com/S1ntax3rror/ShallowWater4PDEonGPU"
 
 [[links]]

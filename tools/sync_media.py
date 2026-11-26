@@ -21,7 +21,7 @@ DOCS = Path.home() / "Documents"
 SITE = Path(__file__).resolve().parent.parent
 OUT = SITE / "assets"
 
-SWE = "ETH/Master/sem_2/gpu2/ShallowWater4PDEonGPU/docs"
+SWE = "ETH/Master/sem_2/gpu2/ShallowWater-DamBreak/docs"
 HPC4WC = "ETH/Master/sem_2/HPC4WC/HPC4WC_project3_domain_decomp/output"
 ASL = "ETH/Master/sem_2/AdvSysLab/Project"
 SPGEMM = "ETH/Bachelor/5_sem/DPHPC/Symbolic_SPgeMM/report_source"
