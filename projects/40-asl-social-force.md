@@ -12,8 +12,8 @@ src = "assets/media/asl_pedestrians.mp4"
 caption = "Pedestrians in a corridor simulated with the Social Force Model, coloured by speed."
 
 [[media]]
-src = "assets/img/asl_roofline.svg"
-caption = "Roofline analysis of the optimised AVX2 implementation."
+src = "assets/img/asl_performance.png"
+caption = "Performance in flops/cycle against the number of pedestrians: the final AVX2 version reaches about 15 flops/cycle, compared with about 1 for the baseline."
 
 [[links]]
 label = "Report (PDF)"

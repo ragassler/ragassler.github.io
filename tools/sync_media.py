@@ -52,11 +52,11 @@ MEDIA = [
     # DPHPC symbolic SpGEMM (figures from the report sources)
     (f"{SPGEMM}/performance_plot_with_hash_table.png", "img/spgemm_overlap_methods.png", {}),
     (f"{SPGEMM}/diagrams/BloomFilter_And_Required_Cols.png", "img/spgemm_bloom_filter.png", {}),
-    # Compile report.tex (e.g. on Overleaf), save it as report_compiled.pdf next to it, re-run:
+    # report_compiled.pdf = report.tex compiled with tectonic (`tectonic -X compile report.tex`)
     (f"{SPGEMM}/report_compiled.pdf", "pdf/dphpc_symbolic_spgemm_report.pdf", {}),
     # Advanced Systems Lab
     (f"{ASL}/docs/out.gif", "media/asl_pedestrians.mp4", {"poster": 6}),
-    (f"{ASL}/docs/roofline_avx_1000_1000.svg", "img/asl_roofline.svg", {}),
+    (f"{ASL}/Final_Report_ASL.pdf", "img/asl_performance.png", {"pdf_page": 7, "pdf_image": 0}),
     (f"{ASL}/Final_Report_ASL.pdf", "pdf/asl_social_force_report.pdf", {}),
     # Bachelor thesis (figure 4.x: WB vs. non-WB perturbation, extracted from the PDF)
     ("ETH/Bachelor/6_sem/Bachelor_thesis/Bachelor_Thesis_Ramura_Gassler.pdf",

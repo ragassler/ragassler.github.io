@@ -15,15 +15,14 @@ caption = "Each rank encodes the row indices it needs in a Bloom filter. Other r
 src = "assets/img/spgemm_overlap_methods.png"
 caption = "Row/column overlap check: the hash-map approach is about 100× faster than moving pointers or binary search (random matrices, sparsity 10⁻⁴)."
 
-# Compile report.tex (e.g. on Overleaf), save it as report_compiled.pdf in
-# ETH/Bachelor/5_sem/DPHPC/Symbolic_SPgeMM/report_source/, run
-# tools/sync_media.py, then remove the # in front of the next three lines:
-# [[links]]
-# label = "Report (PDF)"
-# url = "assets/pdf/dphpc_symbolic_spgemm_report.pdf"
+[[links]]
+label = "Report (PDF)"
+url = "assets/pdf/dphpc_symbolic_spgemm_report.pdf"
 +++
 Project for *Design of Parallel and High-Performance Computing* (ETH Zurich),
 with Diego de los Santos, Sascha Pucillo, Anirudhh Ramesh and Florence Kissling.
+My focus was the **Bloom-filter** approach for deciding which columns each
+rank actually needs.
 
 Sparse general matrix–matrix multiplication (SpGEMM) is a key kernel in
 graph analytics and multigrid solvers. Its **symbolic phase** determines the

@@ -70,8 +70,8 @@ caption = "Multi-GPU shallow-water run over topography"
 project = "swe-gpu"
 
 [[highlights]]
-src = "assets/media/asl_pedestrians.mp4"
-caption = "Social Force pedestrian model, AVX2-optimised"
+src = "assets/img/asl_performance.png"
+caption = "Pedestrian simulation: AVX2 version vs. scalar baseline"
 project = "asl-social-force"
 
 [[highlights]]
