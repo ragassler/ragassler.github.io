@@ -30,5 +30,8 @@ git add -A && git commit -m "Update" && git push   # goes live in ~1 min
 4. For media, add a line to `MEDIA` in `tools/sync_media.py`, then run
    `python3 tools/sync_media.py`. Videos and GIFs become small MP4 files with a poster image.
 5. `draft = true` keeps a project off the public page.
+6. `featured = true` plus `thumb = "assets/…"` marks a project "Start here" and shows the
+   thumbnail in the list (meant for two projects; give them the lowest `order`). In `site.toml`,
+   `featured = true` on a highlight shows it large in the first row.
 
 Topic filter buttons appear automatically for tags that occur in two or more projects.

@@ -6,6 +6,8 @@ summary = "Well-balanced wet/dry finite-volume solver in Julia, from one GPU to 
 type = "Team project, then solo extension"
 year = "2026"
 tags = ["HPC", "FVM", "Multi-GPU", "Julia", "MPI", "Hydrodynamics"]
+featured = true
+thumb = "assets/media/cleuson_zoom_3d.jpg"
 
 [[media]]
 src = "assets/media/cleuson_section.mp4"
