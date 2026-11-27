@@ -1,0 +1,49 @@
+{
+  "project": "ramura-site",
+  "at": "2026-11-27T18:29:32.595Z",
+  "page": "/",
+  "title": "Ramura Gassler · Portfolio",
+  "note": "",
+  "viewport": {
+    "width": 1646,
+    "height": 916,
+    "scale": 1.75,
+    "coarse": false
+  },
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36",
+  "items": [
+    {
+      "n": 1,
+      "kind": "drag",
+      "comment": "Design: it looks like claude artifacts. Use the impeccable skill. FInd other skills that improve the design. Also @ramu find websites you like and give as reference.",
+      "what": "Header “MSC COMPUTATIONAL SCIENCE & ENGINEERING…”",
+      "page": "/",
+      "rect": {
+        "x": 256,
+        "y": 0,
+        "w": 1120,
+        "h": 857
+      },
+      "target": {
+        "selector": "header.hero.wrap",
+        "tag": "header",
+        "text": "MSC COMPUTATIONAL SCIENCE & ENGINEERING · ETH ZURICH Ramura Gassler Numerical PDE solvers that run fast on GPUs and clusters, with results you can check. I am a Master's student in Computational Science and Engineering at ETH Zurich, specialising in geophysics and atmospheric physics. Most of my wo…",
+        "html": "<header class=\"hero wrap\">\n  <div class=\"intro\">\n    <p class=\"eyebrow\">MSc Computational Science &amp; Engineering · ETH Zurich</p>\n    <h1>Ramura Gassler</h1>\n    <p class=\"headline\">Numerical PDE solvers that run fast on GPUs and clusters, with results you can check.</p>\n    <div class=\"prose\"><p>I am a Master's student in Computational Science and Engineering at ETH Zurich, specialising in geophysics and atmospheric physics. Most of my work combines numerical methods with hardware: finite-volume and finite-element solvers for PDEs, parallelised with MPI and GPUs, then profiled, scaled and…"
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "context": {
+        "width": 1631,
+        "open": [],
+        "hidden": [],
+        "filter": "*"
+      }
+    }
+  ],
+  "site": {
+    "rev": "16ec3e4",
+    "repo": "https://github.com/ragassler/ragassler.github.io"
+  }
+}
