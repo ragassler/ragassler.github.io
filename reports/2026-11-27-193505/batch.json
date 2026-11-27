@@ -1,0 +1,109 @@
+{
+  "project": "ramura-site",
+  "at": "2026-11-27T18:35:05.239Z",
+  "page": "/",
+  "title": "Ramura Gassler · Portfolio",
+  "note": "",
+  "viewport": {
+    "width": 1646,
+    "height": 916,
+    "scale": 1.75,
+    "coarse": false
+  },
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36",
+  "items": [
+    {
+      "n": 1,
+      "kind": "drag",
+      "comment": "Make visually clear that the first 2 are the mega hihlights",
+      "what": "Section “Highlights”",
+      "page": "/",
+      "rect": {
+        "x": 256,
+        "y": 857,
+        "w": 1120,
+        "h": 304
+      },
+      "target": {
+        "selector": "section.wrap.tiles:nth-of-type(1)",
+        "tag": "section",
+        "text": "Viscoelastic flow in a 3D extrusion geometry (FEM) Multi-GPU shallow-water run over topography Pedestrian simulation: AVX2 version vs. scalar baseline Kernel vs. communication time for five 16-GPU decompositions",
+        "label": "Highlights",
+        "html": "<section class=\"wrap tiles\" aria-label=\"Highlights\"><a class=\"tile\" href=\"#semester-thesis\"><figure class=\"\"><div class=\"frame\"><img src=\"assets/img/semester_3d_wi_final.png\" alt=\"Viscoelastic flow in a 3D extrusion geometry (FEM)\" loading=\"lazy\"></div><figcaption>Viscoelastic flow in a 3D extrusion geometry (FEM)</figcaption></figure></a><a class=\"tile\" href=\"#swe-gpu\"><figure class=\"\"><div class=\"frame\"><video class=\"auto\" src=\"assets/media/swe_gauss_3d.mp4\" poster=\"assets/media/swe_gauss_3d.jpg\" muted=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" aria-label=\"Multi-GPU shallow-water run over top…"
+      },
+      "scroll": {
+        "x": 0,
+        "y": 399
+      },
+      "context": {
+        "width": 1631,
+        "open": [],
+        "hidden": [],
+        "filter": "*"
+      }
+    },
+    {
+      "n": 2,
+      "kind": "drag",
+      "comment": "add typst to the tools. Not latex",
+      "what": "Section “Background”",
+      "page": "/",
+      "rect": {
+        "x": 256,
+        "y": 1161,
+        "w": 1120,
+        "h": 418
+      },
+      "target": {
+        "selector": "section.wrap.about:nth-of-type(2)",
+        "tag": "section",
+        "text": "Background 2026 – Research assistant, computational mechanics, ETH Zurich FEM data generation for solid mechanics (FEniCSx) 2026 – Teaching assistant, Introduction to Computing, ETH Zurich 2025 – MSc Computational Science & Engineering, ETH Zurich Specialisations: Geophysics, Physics of the Atmosph…",
+        "label": "Background",
+        "html": "<section class=\"wrap about\" aria-label=\"Background\">\n  <div>\n    <h2>Background</h2>\n    <ol class=\"timeline\"><li><span class=\"when\">2026 –</span><span class=\"what\">Research assistant, computational mechanics, ETH Zurich<small>FEM data generation for solid mechanics (FEniCSx)</small></span></li><li><span class=\"when\">2026 –</span><span class=\"what\">Teaching assistant, <em>Introduction to Computing</em>, ETH Zurich</span></li><li><span class=\"when\">2025 –</span><span class=\"what\">MSc Computational Science &amp; Engineering, ETH Zurich<small>Specialisations: Geophysics, Physics of the Atmospher…"
+      },
+      "scroll": {
+        "x": 0,
+        "y": 928
+      },
+      "context": {
+        "width": 1631,
+        "open": [],
+        "hidden": [],
+        "filter": "*"
+      }
+    },
+    {
+      "n": 3,
+      "kind": "drag",
+      "comment": "highlight the 2 coolest projects you want me to click on if I dont know what to click on",
+      "what": "Area “Selected work Click a title to read the…”",
+      "page": "/",
+      "rect": {
+        "x": 256,
+        "y": 1579,
+        "w": 1120,
+        "h": 1115
+      },
+      "target": {
+        "selector": "#work",
+        "tag": "main",
+        "text": "Selected work Click a title to read the abstract or summary. All HPC MPI C++ FEM FVM Julia Multi-GPU Shallow-water equations on multi-GPU, and the Cleuson dam break Well-balanced wet/dry finite-volume solver in Julia, from one GPU to 64, applied to a real Swiss dam-break scenario. TEAM PROJECT, THE…",
+        "html": "<main class=\"wrap\" id=\"work\">\n  <div class=\"work-head\">\n    <h2>Selected work</h2>\n    <p class=\"hint\">Click a title to read the abstract or summary.</p>\n  </div>\n  <div class=\"filters\" role=\"group\" aria-label=\"Filter by topic\"><button class=\"chip on\" data-filter=\"*\">All</button><button class=\"chip\" data-filter=\"hpc\">HPC</button><button class=\"chip\" data-filter=\"mpi\">MPI</button><button class=\"chip\" data-filter=\"c\">C++</button><button class=\"chip\" data-filter=\"fem\">FEM</button><button class=\"chip\" data-filter=\"fvm\">FVM</button><button class=\"chip\" data-filter=\"julia\">Julia</button><button cla…"
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1550
+      },
+      "context": {
+        "width": 1631,
+        "open": [],
+        "hidden": [],
+        "filter": "*"
+      }
+    }
+  ],
+  "site": {
+    "rev": "16ec3e4",
+    "repo": "https://github.com/ragassler/ragassler.github.io"
+  }
+}
