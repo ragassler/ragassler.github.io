@@ -142,7 +142,7 @@ def project_html(p):
         f'<span aria-hidden="true">{" ↗" if l["url"].startswith("http") else " ↓"}</span></a>'
         for l in p.get("links", [])
     )
-    note = f'<p class="note">{inline(p["note"])}</p>' if p.get("note") else ""
+    note = f'<p class="note"><span>{inline(p["note"])}</span></p>' if p.get("note") else ""
     featured = p.get("featured", False)
     thumb = ""
     if featured:
@@ -159,7 +159,7 @@ def project_html(p):
       <span class="p-type">{html.escape(p.get('type', ''))}<span class="p-year">{html.escape(str(p.get('year', '')))}</span></span>
       <ul class="tags">{tags}</ul>
     </span>
-    <span class="chev" aria-hidden="true"></span>
+    <span class="toggle" aria-hidden="true"></span>
   </summary>
   <div class="p-body">
     {media_block}
@@ -190,21 +190,26 @@ def page(site, projects):
     )
     skills = "".join(f"<li>{html.escape(s)}</li>" for s in site.get("skills", []))
 
-    contact = []
+    # title block: one cell per contact channel, each labelled like a drawing's title block
+    cells = []
     if site.get("email"):
-        contact.append(f'<a href="mailto:{site["email"]}">{html.escape(site["email"])}</a>')
+        cells.append(("Email", f'<a href="mailto:{site["email"]}">{html.escape(site["email"])}</a>'))
     for key, label in (("github", "GitHub"), ("linkedin", "LinkedIn")):
         if site.get(key):
-            contact.append(f'<a href="{site[key]}" target="_blank" rel="noopener">{label} ↗</a>')
+            handle = site[key].rstrip("/").rsplit("/", 1)[-1]
+            cells.append((label, f'<a href="{site[key]}" target="_blank" rel="noopener">'
+                                 f'{html.escape(handle)}<span aria-hidden="true"> ↗</span></a>'))
     if site.get("cv"):
-        contact.append(f'<a href="{site["cv"]}">CV (PDF) ↓</a>')
+        cells.append(("CV", f'<a href="{site["cv"]}">PDF<span aria-hidden="true"> ↓</span></a>'))
+    contact = "".join(f'<p class="tb-cell"><span class="tb-label">{label}</span>{value}</p>'
+                      for label, value in cells)
 
     hero = site["hero"]
     hero_html = media_html(hero, "hero-media")
-    if hero.get("project"):
-        hero_html = hero_html.replace(
-            "<figcaption>",
-            f'<figcaption><a class="jump" href="#{hero["project"]}">See project →</a> ', 1)
+    jump = (f'<a class="jump" href="#{hero["project"]}">See project<span aria-hidden="true"> →</span></a> '
+            if hero.get("project") else "")
+    hero_html = hero_html.replace(
+        "<figcaption>", f'<figcaption><span class="view">View A</span> {jump}', 1)
 
     tiles = "".join(
         f'<a class="tile{" featured" if h.get("featured") else ""}" href="#{h["project"]}">{media_html(h)}</a>'
@@ -221,7 +226,8 @@ def page(site, projects):
         intro=markdown(site.get("intro", "")),
         background=bg,
         skills=skills,
-        contact=" <span aria-hidden='true'>·</span> ".join(contact),
+        contact=contact,
+        zones="".join(f"<li>{i}</li>" for i in range(1, 9)),
         hero=hero_html,
         tiles=tiles,
         chips=chip_html,
@@ -242,27 +248,35 @@ TEMPLATE = """<!doctype html>
 <meta property="og:image" content="assets/media/cleuson_2d_5m.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="hero wrap">
+<div class="sheet">
+<ol class="zones" aria-hidden="true">{zones}</ol>
+
+<header class="hero zone" data-zone="A">
   <div class="intro">
-    <p class="eyebrow">{role}</p>
-    <h1>{name}</h1>
+    <div class="titleblock">
+      <h1>{name}</h1>
+      <p class="tb-cell tb-role"><span class="tb-label">Studies</span>{role}</p>
+      {contact}
+    </div>
     <p class="headline">{headline}</p>
     <div class="prose">{intro}</div>
-    <p class="contact">{contact}</p>
   </div>
   {hero}
 </header>
 
-<section class="wrap tiles" aria-label="Highlights">{tiles}</section>
+<section class="zone highlights" data-zone="B" aria-labelledby="h-highlights">
+  <h2 id="h-highlights">Highlights</h2>
+  <div class="tiles">{tiles}</div>
+</section>
 
-<section class="wrap about" aria-label="Background">
+<section class="zone about" data-zone="C" aria-label="Background and tools">
   <div>
     <h2>Background</h2>
-    <ol class="timeline">{background}</ol>
+    <ol class="timeline"><li class="th" aria-hidden="true"><span>Date</span><span>Description</span></li>{background}</ol>
   </div>
   <div>
     <h2>Tools</h2>
@@ -270,7 +284,7 @@ TEMPLATE = """<!doctype html>
   </div>
 </section>
 
-<main class="wrap" id="work">
+<main class="zone" id="work" data-zone="D">
   <div class="work-head">
     <h2>Selected work</h2>
     <p class="hint">Click a title to read the abstract or summary. Not sure where to begin? Try the two marked “Start here”.</p>
@@ -281,7 +295,8 @@ TEMPLATE = """<!doctype html>
   </div>
 </main>
 
-<footer class="wrap">{footer}</footer>
+<footer>{footer}</footer>
+</div>
 <script src="assets/js/site.js"></script>
 </body>
 </html>
