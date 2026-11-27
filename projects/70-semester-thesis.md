@@ -1,12 +1,14 @@
 +++
 # Kept general on purpose: no model equations or method details of ZRM.
 id = "semester-thesis"
-order = 45
+order = 15
 title = "FEM simulation of the ZRM viscoelastic model for different channel geometries"
 summary = "Semester thesis: implementing a viscoelastic constitutive model in a finite-element framework and testing it from benchmark flows to 3D extrusion geometries."
 type = "MSc semester thesis"
 year = "2026"
 tags = ["FEM", "COMSOL", "Viscoelastic flow", "Non-Newtonian fluids"]
+featured = true
+thumb = "assets/img/semester_3d_wi_final.png"
 note = "The thesis itself is not public. This is a general summary of the work."
 
 [[media]]

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-27T19:30:00Z",
+  "title": "Design System: Ramura Gassler · Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "redline": { "role": "primary", "displayName": "Redline", "canonical": "#c0161d" },
+      "plotter-paper": { "role": "neutral", "displayName": "Plotter paper", "canonical": "#f4f6f5" },
+      "drawing-ink": { "role": "neutral", "displayName": "Drawing ink", "canonical": "#121619" },
+      "model-space": { "role": "neutral", "displayName": "CAD model space (dark ground)", "canonical": "#0d1317" }
+    },
+    "typographyMeta": {
+      "name": { "displayName": "Name", "purpose": "The h1 in the title block." },
+      "section-title": { "displayName": "View title", "purpose": "Section h2, caps, thick then thin underline." },
+      "label": { "displayName": "Label", "purpose": "Title-block field labels, metadata, filter cells." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-plot", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Project body drawn in top to bottom (clip-path), 0.55s; toggle +/- rotation." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "900px" },
+      { "name": "phone", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Filter cell",
+      "kind": "chip",
+      "refersTo": "filter-cell",
+      "description": "Topic filter; cells share borders, the active one fills redline.",
+      "html": "<div class=\"ds-filters\"><button class=\"ds-cell on\">All</button><button class=\"ds-cell\">HPC</button><button class=\"ds-cell\">MPI</button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;padding:1px 0 0 1px}.ds-cell{font:500 .82rem/1 'Barlow Semi Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#121619;background:#f4f6f5;border:1px solid #121619;margin:-1px 0 0 -1px;padding:10px 14px;min-height:40px;cursor:pointer}.ds-cell.on{background:#c0161d;border-color:#c0161d;color:#fff}"
+    },
+    {
+      "name": "Link cell",
+      "kind": "button",
+      "refersTo": "link-cell",
+      "description": "Report / code / PDF links under a project.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Report (PDF)</a>",
+      "css": ".ds-btn{font:600 .88rem/1 'Barlow Semi Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#121619;padding:12px 14px;border:1.5px solid #121619;text-decoration:none;display:inline-block}.ds-btn:hover{background:#121619;color:#f4f6f5}"
+    }
+  ],
+  "narrative": {
+    "northStar": "One drawing sheet documenting a body of numerical work",
+    "overview": "A framed sheet with zone references, a title block for identity, simulations as labelled views, a revision-table timeline and a parts grid of tools. Ink on cool plotter paper; red only for state.",
+    "keyCharacteristics": ["zone band with numbers and section letters", "title block", "view titles with double underline", "cells and rules, no radii or shadows"],
+    "rules": [
+      { "name": "The Redline Rule", "body": "Red marks what is active or wanted now, never decoration.", "section": "colors" },
+      { "name": "The Ink Rule", "body": "Lines are ink, never grey; weight (1 / 1.5 / 3px) carries hierarchy.", "section": "elevation" }
+    ],
+    "dos": ["Keep new elements as cells and rules in ink."],
+    "donts": ["No pills, rounded cards, soft shadows or eyebrows above headings.", "No side bars on boxes."]
+  }
+}

@@ -25,7 +25,7 @@ footer = "© 2026 Ramura Gassler · Terrain data in the Cleuson animations © sw
 skills = [
   "Julia", "C / C++", "Python", "MPI", "CUDA / GPU", "OpenMP", "SIMD (AVX2)",
   "ParallelStencil.jl", "ImplicitGlobalGrid.jl", "FEniCSx", "COMSOL",
-  "Slurm", "NVIDIA Nsight", "Linux", "Git",
+  "Slurm", "NVIDIA Nsight", "Linux", "Git", "Typst",
 ]
 
 [[background]]
@@ -58,16 +58,19 @@ caption = "Dam-break simulation of Lac de Cleuson (VS) on swisstopo terrain, 5 m
 alt = "Top-down map animation of the flood wave leaving the Cleuson reservoir and running down the valley"
 project = "swe-gpu"
 
-# Small animations/plots below the intro; each links to a project
+# Small animations/plots below the intro; each links to a project.
+# featured = true shows a highlight large, in the first row (meant for two).
 [[highlights]]
 src = "assets/img/semester_3d_wi_final.png"
 caption = "Viscoelastic flow in a 3D extrusion geometry (FEM)"
 project = "semester-thesis"
+featured = true
 
 [[highlights]]
 src = "assets/media/swe_gauss_3d.mp4"
 caption = "Multi-GPU shallow-water run over topography"
 project = "swe-gpu"
+featured = true
 
 [[highlights]]
 src = "assets/img/asl_performance.png"
