@@ -143,10 +143,15 @@ def project_html(p):
         for l in p.get("links", [])
     )
     note = f'<p class="note">{inline(p["note"])}</p>' if p.get("note") else ""
+    featured = p.get("featured", False)
+    thumb = ""
+    if featured:
+        img = f'<img src="{p["thumb"]}" alt="" loading="lazy">' if p.get("thumb") else ""
+        thumb = f'<span class="p-thumb">{img}<span class="p-star">Start here</span></span>'
     return f"""
-<details class="project" id="{pid}" data-tags="{tag_slugs}">
+<details class="project{' featured' if featured else ''}" id="{pid}" data-tags="{tag_slugs}">
   <summary>
-    <span class="p-head">
+    {thumb}<span class="p-head">
       <span class="p-title">{inline(p['title'])}</span>
       <span class="p-sub">{inline(p.get('summary', ''))}</span>
     </span>
@@ -202,7 +207,7 @@ def page(site, projects):
             f'<figcaption><a class="jump" href="#{hero["project"]}">See project →</a> ', 1)
 
     tiles = "".join(
-        f'<a class="tile" href="#{h["project"]}">{media_html(h)}</a>'
+        f'<a class="tile{" featured" if h.get("featured") else ""}" href="#{h["project"]}">{media_html(h)}</a>'
         for h in site.get("highlights", [])
     )
 
@@ -268,7 +273,7 @@ TEMPLATE = """<!doctype html>
 <main class="wrap" id="work">
   <div class="work-head">
     <h2>Selected work</h2>
-    <p class="hint">Click a title to read the abstract or summary.</p>
+    <p class="hint">Click a title to read the abstract or summary. Not sure where to begin? Try the two marked “Start here”.</p>
   </div>
   <div class="filters" role="group" aria-label="Filter by topic">{chips}</div>
   <div class="projects">
